@@ -3,7 +3,7 @@ module TouRETS
     include Utilities
     extend Utilities
     
-    SEARCH_QUERY_DEFAULTS = {:listing_status => "ER,EA,C", :idx_display => "Y", :internet_display => "Y"}
+    SEARCH_QUERY_DEFAULTS = {:listing_status => "ER,EA,C,S"}
     # This class searches for ResidentialProperty, Condo, SingleFamily, Rental
     # Some MLS use "1", some use :RES... Will need to decide which way is to be used.
     # Meta-Classes are as listed in the following
