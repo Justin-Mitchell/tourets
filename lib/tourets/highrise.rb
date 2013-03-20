@@ -6,7 +6,35 @@ module TouRETS
     SEARCH_QUERY_DEFAULTS = {:listing_status => "ER,EA,C", :idx_display => "Y", :internet_display => "Y"}
     # This class searches for ResidentialProperty, Condo, SingleFamily, Rental
     # Some MLS use "1", some use :RES... Will need to decide which way is to be used.
-    SEARCH_CONFIG_DEFAULTS = {:search_type => :Property, :class => "2"}
+    # Meta-Classes are as listed in the following
+    # 
+    # Description  => Residential
+    # StandardName => ResidentialProperty
+    # VisibleName  => RES
+    # ClassName    => 1
+    #
+    # Description  => Multiple Dwelling
+    # StanderdName => MultiFamily
+    # VisibleName  => MUL
+    # ClassName    => 4
+    # 
+    # Description  => Vacant / Subdivided Land
+    # StandardName => LotsAndLand
+    # VisibleName  => LND
+    # ClassName    => 5
+    #
+    # Description  => Residential Rental
+    # StandardName => 
+    # VisibleName  => RNT
+    # ClassName    => 9
+    #
+    # Description  => High Rise
+    # StandardName => 
+    # VisibleName  => VER
+    # ClassName    => 16
+    #
+    
+    SEARCH_CONFIG_DEFAULTS = {:search_type => :Property, :class => "16"}
     
     class << self
       
