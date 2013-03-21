@@ -7,6 +7,7 @@ require 'tourets/search'
 require 'tourets/photo'
 require 'tourets/property'
 require 'tourets/highrise'
+require 'tourets/lotsnland'
 
 module TouRETS
   include Utilities

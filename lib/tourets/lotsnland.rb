@@ -1,5 +1,5 @@
 module TouRETS
-  class Highrise
+  class Lotsnland
     include Utilities
     extend Utilities
     
@@ -34,7 +34,7 @@ module TouRETS
     # ClassName    => 16
     #
     
-    SEARCH_CONFIG_DEFAULTS = {:search_type => :Property, :class => "16"}
+    SEARCH_CONFIG_DEFAULTS = {:search_type => :Property, :class => "5"}
     
     class << self
       
