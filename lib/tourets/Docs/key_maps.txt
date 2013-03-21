@@ -1,0 +1,664 @@
+# High Rises
+
+sysid -> sysid
+1 -> Property Type
+10 -> Zip Code
+25 -> Actual Close Date
+26 -> LA Name
+37 -> Area
+68 -> Bedrooms
+81 -> Comp Days on Market
+85 -> Acceptance Date
+87 -> County Name
+101 -> DOM
+104 -> Entry Date
+134 -> Last Transaction Code
+135 -> Last Transaction Date
+137 -> List Office Code
+138 -> List Date
+143 -> List Agent Public ID
+144 -> List Price
+163 -> ML #
+173 -> Original List Price
+182 -> Photo Instructions
+205 -> Record Delete Date
+207 -> Record Delete Flag
+210 -> Sale Price
+211 -> Buyer Broker
+218 -> Buyer Agent Public ID
+233 -> Sold Term
+242 -> Status
+264 -> Year Built
+1736 -> Est Clo/Lse dt
+1738 -> LP/SqFt (w/cents)
+1809 -> IDX
+2139 -> Virtual Tour Link
+2238 -> Last Image Trans Date
+2353 -> Subdivision Name XP
+2359 -> SP/SqFt [w/cents]
+2361 -> SqFt
+2369 -> Short Sale
+2379 -> Bedrooms (Total Possible #)
+2381 -> Days from Listing to Close
+2386 -> UnitNumber
+2664 -> Building Number
+2665 -> Total Floors
+2667 -> Elevator Floor #
+2668 -> Builder
+2669 -> Model
+2670 -> Built Description
+2671 -> Location
+2672 -> Tower Name
+2677 -> Association Features Available
+2678 -> Elementary School 3-5
+2679 -> Elementary School K-2
+2680 -> High School
+2681 -> Jr High School
+2683 -> Metro Map Coor
+2684 -> Metro Map  Page
+2685 -> Building Description
+2686 -> Unit Levels
+2687 -> Junior Suite (under 600 sqft)
+2688 -> Full Baths
+2689 -> 3/4 Baths
+2690 -> Baths Total
+2691 -> Half Baths
+2692 -> Unit Description
+2693 -> Condo Conversion
+2694 -> Approx Liv Area
+2695 -> #Den/Other
+2696 -> Private Pool
+2697 -> Unit Pool Indoor
+2698 -> Private Spa
+2699 -> Unit Spa Indoor
+2700 -> # of Loft Areas
+2701 -> Parking Description
+2702 -> # of Parking Spaces Included
+2703 -> Parking Level
+2705 -> Directions
+2708 -> Living Room Description
+2709 -> Living Room Dimensions
+2710 -> Great Room Description
+2711 -> Great Room Dimensions
+2712 -> Media Room Y/N
+2713 -> Media Room Dimensions
+2714 -> Dining Room Description
+2715 -> Dining Room Dimensions
+2716 -> Kitchen Description
+2717 -> Kitchen Flooring
+2718 -> Kitchen Countertops
+2719 -> Master Bedroom Description
+2720 -> Master Bedroom Dimensions
+2721 -> Master Bath Description
+2722 -> 2nd Bedroom Description
+2723 -> 2nd Bedroom Dimensions
+2724 ->  3rd Bedroom Description
+2725 -> 3rd Bedroom Dimensions
+2726 -> 4th Bedroom Description
+2727 -> 4th Bedroom Dimensions
+2728 -> 5th Bedroom Description
+2729 -> 5th Bedroom Dimensions
+2730 -> Den/Other Dimensions
+2731 -> Loft Area Dimensions
+2732 -> Loft Dimensions 1st Floor
+2733 -> Loft Dimensions 2nd Floor
+2734 -> Loft Description
+2735 -> Furnishings Description
+2736 -> # Terraces
+2737 -> Terrace Total Sqft
+2738 -> Terrace Location
+2739 -> Refrigerator Included
+2740 -> Refrigerator Description
+2741 -> Disposal Included
+2742 -> Washer Included
+2743 -> Dryer Included
+2744 -> Dryer Utilities
+2745 -> Washer/Dryer Location
+2746 -> Washer Dryer Description
+2747 -> Dishwasher Included
+2748 -> Dishwasher Description
+2749 -> Other Appliances
+2750 -> Oven Description
+2751 -> Interior
+2752 -> Flooring
+2753 -> Fireplace
+2754 -> Fireplace Description
+2755 -> Fireplace Location
+2756 -> Primary View Direction
+2757 -> Views
+2758 -> Exterior Unit Description
+2760 -> Heating Description
+2761 -> Heating Fuel
+2763 -> Cooling Fuel
+2764 -> Cooling System
+2765 -> Energy Description
+2766 -> Utility Information
+2768 -> Leed Certified
+2769 -> # Storage Units
+2770 -> Storage Unit Desc
+2775 -> On Site Staff Includes
+2776 -> Services Available On Site
+2777 -> Security
+2787 -> Assoc Fee Includes
+2804 -> Foreclosure Commenced Y/N
+2806 -> Financing Considered
+2807 -> Possession Description
+2810 -> Internet? Y/N
+2813 -> LO Name
+2826 -> Power On or Off
+2829 -> Contingency Desc
+2830 -> Sellers Contribution $
+2832 -> Property Condition
+2840 -> Great Room Y/N
+2843 -> Repo/Reo Y/N
+2858 -> Public Address Y/N
+2859 -> CommentaryY/N
+2860 -> AVM Y/N
+2861 -> Public Address
+2878 -> Auction Date
+2879 -> Auction Type
+2880 -> Buyer Premium
+2901 -> DrivingLatitude
+2902 -> DrivingLongitude
+2909 -> City
+
+# Residential Property
+
+sysid => sysid
+1 => Property Type
+2 => Approximate Acreage
+10 => Zip Code
+18 => StatusChangeDate
+25 => Actual Close Date
+26 => LA Name
+30 => Dishwasher Inc
+31 => Disposal Included
+33 => Refrigerator Included
+34 => Dryer Utilities
+37 => Area
+60 => 3/4 Baths
+61 => Full Baths
+62 => Half Baths
+63 => Baths Total
+64 => Bath Downstairs Description
+68 => Bedrooms
+72 => Built Description
+73 => Carport Description
+74 => Carport
+81 => Comp Days on Market
+84 => Contingency Desc
+85 => Acceptance Date
+86 => Cooling Fuel Description
+87 => County Name
+89 => 2nd Bedroom Dimensions
+90 => 3rd Bedroom Dimensions
+91 => 4th Bedroom Dimensions
+92 => Dining Room Dimensions
+93 => Family Room Dimensions
+94 => 5th Bedroom Dimensions
+95 => Living Room Dimensions
+96 => Master Bedroom Dimensions
+97 => 5th Bedroom Description
+101 => DOM
+104 => Entry Date
+112 => Fence
+113 => Fireplaces
+120 => Converted Garage
+122 => Garage
+129 => Images
+130 => Internet?  Y/N
+134 => Last Transaction Code
+135 => Last Transaction Date
+137 => List Office Code
+138 => List Date
+143 => List Agent Public ID
+144 => List Price
+154 => Lot Sqft
+155 => Community Name
+163 => ML #
+171 => LO Name
+173 => Original List Price
+184 => #Den/Other
+202 => Property Condition
+203 => PvPool
+205 => Record Delete Date
+207 => Record Delete Flag
+210 => Sale Price
+211 => Buyer Broker
+213 => Elementary School 3-5
+214 => High School
+215 => Jr High School
+218 => Buyer Agent Public ID
+219 => Sewer
+231 => #Loft
+232 => Sellers Contribution $
+233 => Sold Term
+236 => PvSpa
+237 => Approx Liv Area
+242 => Status
+247 => Subdivision Name
+260 => Washer Dryer Location
+261 => Water
+264 => Year Built
+266 => Zoning
+268 => Property Description
+269 => Garage Description
+270 => Roof Description
+271 => Lot Description
+272 => Spa Description
+273 => Pool Description
+276 => Dining Room Description
+277 => Family Room Description
+278 => Kitchen Description
+279 => Living Room Description
+280 => Master Bath Desc
+281 => Master Bedroom Description
+282 => 2nd Bedroom Description
+283 => 3rd Bedroom Description
+284 => 4th Bedroom Description
+289 => Oven Description
+290 => Other Appliance Description
+291 => Construction Description
+292 => Interior Description
+293 => Flooring Description
+294 => Fireplace Description
+295 => Fence Type
+296 => Equestrian Description
+297 => House Faces
+298 => Miscellaneous Description
+299 => Exterior Description
+300 => Landscape Description
+301 => Heating Description
+302 => Heating Fuel Description
+303 => Cooling System
+304 => Utility Information
+305 => Energy Description
+1736 => Est Clo/Lse dt
+1809 => IDX
+2139 => Virtual Tour Link
+2238 => Last Image Trans Date
+2343 => Metro Map Coor XP
+2345 => Metro Map Page XP
+2359 => SP/SqFt [w/cents]
+2361 => SqFt
+2369 => Short Sale
+2377 => Elementary School K-2
+2379 => Bedrooms (Total Possible #)
+2381 => Days from Listing to Close
+2386 => UnitNumber
+2388 => Assoc/Comm Features Desc
+2392 => Bath Downstairs? Y/N
+2394 => Bedroom Downstairs? Y/N
+2414 => Bldg Desc
+2422 => Fireplace Location
+2424 => Foreclosure Commenced Y/N
+2426 => Furnishings Description
+2428 => Great Room Y/N
+2430 => Great Room Dimensions
+2432 => Great Room Description
+2438 => Parking Description
+2440 => Washer Included?
+2442 => Dryer Included?
+2450 => House Views
+2452 => Property Subtype
+2660 => Repo/Reo Y/N
+2858 => Public Address Y/N
+2859 => CommentaryY/N
+2860 => AVM Y/N
+2861 => Public Address
+2878 => Auction Date
+2879 => Auction Type
+2880 => Buyer Premium
+2901 => DrivingLatitude
+2902 => DrivingLongitude
+2909 => City
+
+# Multiple Dwelling
+
+sysid => sysid
+1 => Property Type
+10 => Zip Code
+25 => Actual Close Date
+26 => LA Name
+37 => Area
+81 => Comp Days on Market
+85 => Acceptance Date
+87 => County Name
+101 => DOM
+104 => Entry Date
+129 => Images
+134 => Last Transaction Code
+135 => Last Transaction Date
+137 => List Office Code
+138 => List Date
+143 => List Agent Public ID
+144 => List Price
+163 => ML #
+173 => Original List Price
+182 => Photo Instructions
+210 => Sale Price
+211 => Buyer Broker
+218 => Buyer Agent Public ID
+233 => Sold Term
+242 => Status
+264 => Year Built
+688 => 1 Bedroom 1 1/2 Bath
+689 => 1 Bedroom 1 Bath
+690 => 1 Bedroom 2 Bath
+692 => 1 Bedroom Rent
+693 => # 1 Bdrm Unfurn
+694 => 2 Bedroom 1 1/2 Bath
+695 => 2 Bedroom 1 Bath
+696 => 2 Bedroom 2 Bath
+698 => 2 Bedroom Rent
+699 => # 2 Bdrm Unfurn
+700 => 3 Bedroom 1 1/2 Bath
+701 => 3 Bedroom 1 Bath
+702 => 3 Bedroom 2 Bath
+704 => 3 Bedroom Rent
+705 => # 3 Bdrm Unfurn
+732 => Building Description
+735 => Built Description
+748 => Contingency Desc
+750 => Cost per Unit
+759 => Flood Zone
+770 => Handicap Adapted
+771 => Heating Fuel Description
+773 => Internet?  Y/N
+782 => Maintenance
+783 => Management
+796 => Number of Furnished Units
+798 => # Floors
+802 => LO Name
+808 => Total # of Parking Spaces
+816 => Property Condition
+824 => Sewer
+831 => Sold Down Payment
+839 => Approx Liv Area
+844 => Studio 1 1/2 Bath
+845 => Studio 1 Bath
+846 => Studio 2 Bath
+848 => Studio Rent
+849 => # Unfurn Studio
+850 => Subdivision Name
+853 => # Bldgs
+854 => # Units
+860 => Water
+870 => Financing Considered
+873 => Utilities Incl
+876 => Roof Description
+877 => Flooring Description
+878 => Construction Description
+879 => Parking Description
+880 => Other Appliance Description
+882 => Proj Amenities Description
+883 => Heating Description
+884 => Cooling Description
+885 => Separate Meter
+889 => Rent Terms Description
+890 => Directions
+1736 => Est Clo/Lse dt
+1738 => LP/SqFt (w/cents)
+1809 => IDX
+2139 => Virtual Tour Link
+2140 => SP/SqFt
+2238 => Last Image Trans Date
+2341 => LP/SqFt
+2359 => SP/SqFt [w/cents]
+2361 => SqFt
+2369 => Short Sale
+2381 => Days from Listing to Close
+2515 => Lot Square Foot
+2529 => # Acres 
+2545 => Seller Contribution
+2837 => Foreclosure Commenced Y/N
+2838 => Repo/Reo Y/N
+2858 => Public Address Y/N
+2859 => CommentaryY/N
+2860 => AVM Y/N
+2861 => Public Address
+2864 => SP/LP
+2878 => Auction Date
+2879 => Auction Type
+2901 => DrivingLatitude
+2902 => DrivingLongitude
+2909 => City
+
+# Lots and Land
+
+sysid => sysid
+1 => Property Type
+10 => Zip Code
+25 => Actual Close Date
+26 => LA Name
+37 => Area
+68 => Bedrooms
+81 => Comp Days on Market
+85 => Acceptance Date
+87 => County Name
+101 => DOM
+104 => Entry Date
+129 => Images
+134 => Last Transaction Code
+135 => Last Transaction Date
+137 => List Office Code
+138 => List Date
+143 => List Agent Public ID
+144 => List Price
+163 => ML #
+173 => Original List Price
+205 => Record Delete Date
+207 => Record Delete Flag
+210 => Sale Price
+211 => Buyer Broker
+218 => Buyer Agent Public ID
+233 => Sold Term
+242 => Status
+892 => #G Acres
+893 => Address St Name
+915 => Cash to Assume
+922 => Contingency Desc
+931 => Flood Zone
+941 => Internet?  Y/N
+944 => Lot Depth
+945 => Lot Frontage
+955 => # Parcels
+957 => LO Name
+964 => Paved Road
+970 => Price Per Acre
+971 => Price SAcres
+978 => Soil Report Available
+990 => Sold Price per Acre
+996 => State
+1000 => Total AC
+1009 => Zoning
+1010 => Zoning Authority
+1011 => Lot Description
+1012 => Sewer
+1013 => Water
+1014 => Electricity
+1015 => Gas Description
+1018 => Map Description
+1019 => Directions
+1024 => Financing Considered
+1736 => Est Clo/Lse dt
+1809 => IDX
+2139 => Virtual Tour Link
+2238 => Last Image Trans Date
+2369 => Short Sale
+2379 => Bedrooms (Total Possible #)
+2381 => Days from Listing to Close
+2655 => LADOM
+2836 => Subdivision Name
+2837 => Foreclosure Commenced Y/N
+2838 => Repo/Reo Y/N
+2858 => Public Address Y/N
+2859 => CommentaryY/N
+2860 => AVM Y/N
+2861 => Public Address
+2864 => SP/LP
+2878 => Auction Date
+2879 => Auction Type
+2880 => Buyer Premium
+2901 => DrivingLatitude
+2902 => DrivingLongitude
+2909 => City
+
+# RENTAL
+
+sysid => sysid
+1 => Property Type
+10 => Zip Code
+25 => Actual Close Date
+26 => LA Name
+37 => Area
+68 => Bedrooms
+81 => Comp Days on Market
+85 => Acceptance Date
+87 => County Name
+101 => DOM
+104 => Entry Date
+129 => Images
+134 => Last Transaction Code
+135 => Last Transaction Date
+137 => List Office Code
+138 => List Date
+143 => List Agent Public ID
+144 => List Price
+163 => ML #
+173 => Original List Price
+205 => Record Delete Date
+207 => Record Delete Flag
+211 => Buyer Broker
+242 => Status
+264 => Year Built
+1463 => Compactor
+1464 => Dishwasher
+1465 => Disposal
+1467 => Refrigerator
+1468 => Dryer Utilities
+1469 => 3/4 Baths
+1470 => Full Baths
+1471 => Half Baths
+1472 => Baths Total
+1474 => Cable Available
+1475 => Carports
+1483 => Community Pool? Y/N
+1487 => Contingency Desc
+1488 => Cooling Fuel Description
+1489 => Date Available
+1490 => Administration Deposit
+1491 => Cleaning Deposit
+1492 => Key Deposit
+1498 => Fence
+1499 => # Fireplaces
+1505 => Garage
+1507 => Internet? Y/N
+1509 => Construction Description
+1510 => Parking Description
+1511 => Lot Description
+1516 => Showing Agent Public ID
+1523 => Metro Map Map Coor
+1524 => Metro Map Map Page
+1526 => Rented Price
+1530 => Occupancy Description
+1531 => LO Name
+1533 => Oven Description
+1535 => Power On/Off
+1540 => Condition
+1541 => Private Pool
+1545 => Cleaning Refund
+1548 => Pet Refund
+1551 => Elem K-2
+1552 => High School
+1553 => Jr High School
+1557 => Spa
+1558 => Approx Liv Area
+1563 => Studio
+1564 => Subdivision Name
+1569 => Washer-Dryer Included?
+1570 => Washer Dryer Location
+1573 => Assoc/Comm Features Desc
+1574 => Zoning
+1575 => Style
+1576 => Building Description
+1578 => Pool Description
+1579 => Din/Fam Room Description
+1580 => Spa Description
+1581 => Deposit
+1582 => Lease Description
+1583 => Tenant Pays
+1584 => Directions
+1586 => Other Appliance Description
+1587 => Interior Description
+1588 => Master Bedroom Description
+1589 => Living Room Description
+1590 => Flooring Description
+1591 => Kitchen Description
+1592 => Exterior Description
+1593 => Fireplace Description
+1596 => Fence Type
+1597 => Heating Description
+1598 => Heating Fuel Description
+1599 => Cooling Description
+1601 => Sold Lease Description
+1748 => Furnished
+1809 => IDX
+2139 => Virtual Tour Link
+2140 => SP/SqFt
+2146 => Photo Inst
+2238 => Last Image Trans Date
+2341 => LP/SqFt
+2359 => SP/SqFt [w/cents]
+2361 => SqFt
+2386 => UnitNumber
+2549 => Condo Conversion Y/N
+2555 => Loft Dim 1st Floor
+2564 => 5th Bedroom Description
+2566 => 4th Bedroom Description
+2567 => Loft Dim 2nd Floor
+2569 => Bath Down Y/N
+2570 => Loft Description
+2571 => 3rd Bedroom Description
+2572 => Building #
+2574 => Unit Description
+2576 => Approx Addl Liv Area
+2579 => Bath Down Description
+2580 => Den Dimensions
+2584 => 4th Bedroom Dimensions
+2585 => 5th Bedroom Dimensions
+2586 => 3rd Bedroom Dimensions
+2587 => 2nd Bedroom Dimensions
+2588 => 2nd Bedroom Description
+2590 => Master Bath Description
+2591 => Furnished Description
+2592 => #Den/Other
+2593 => #Loft
+2594 => Lot Square Footage
+2595 => Property Description
+2597 => Family Room Dimensions
+2598 => Great Room Dimensions
+2599 => Great Room Y/N
+2600 => Great Room Description
+2601 => Dining Room Dimensions
+2602 => Dining Room Description
+2604 => Utility Information
+2607 => Rent Range
+2615 => Master Bedroom Dimensions
+2616 => Garage Desc
+2617 => Manufactured
+2618 => Loft Dimensions
+2622 => Family Room Description
+2623 => Living Room Dimensions
+2625 => Elem 3-5
+2627 => Converted Garage Y/N
+2655 => LADOM
+2657 => Bedroom Downstairs? Y/N
+2858 => Public Address Y/N
+2859 => CommentaryY/N
+2860 => AVM Y/N
+2861 => Public Address
+2864 => SP/LP
+2901 => DrivingLatitude
+2902 => DrivingLongitude
+2909 => City
