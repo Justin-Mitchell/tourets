@@ -1,38 +1,36 @@
 module TouRETS
-  class Highrise
+  class Rental
     include Utilities
     extend Utilities
     
-    SEARCH_QUERY_DEFAULTS = {:listing_status => "ER,EA,C,S", :idx_display => "Y"}
-    # This class searches for ResidentialProperty, Condo, SingleFamily, Rental
-    # Some MLS use "16", some use :VER... Will need to decide which way is to be used.
-    # Meta-Classes are as listed in the following
+    SEARCH_QUERY_DEFAULTS = {:listing_status => "ER,EA,C", :idx_display => "Y"}
+    # This class searches for ResidentialRental, Condo, SingleFamily, Rental
+    # Some MLS use "9", some use :RNT... Will need to decide which way is to be used.
     #
-    # Description  => High Rise
+    # Description  => Residential Rental
     # StandardName => 
-    # VisibleName  => VER
-    # ClassName    => 16
+    # VisibleName  => RNT
+    # ClassName    => 9
     #
-    
-    SEARCH_CONFIG_DEFAULTS = {:search_type => :Property, :class => "16"}
+    SEARCH_CONFIG_DEFAULTS = {:search_type => :Property, :class => "9"}
     
     class << self
       
       # Returns an array of all of the properties. Same as calling where() with no options
       # TODO: figure out why it limits to 5,000 records.
-      # Property.all
+      # Rental.all
       def all
         where
       end
       
-      # Returns an array of property results. A Property is defined as ["Single Family Residential", "Manufactured Home", "Condominium", "Townhouse"]
-      # Property.where(:bedrooms => 7, :bathrooms => 4, :list_price => 200000..300000)
-      # Property.where(:property_type => {:not => ['CONDO', 'TOWNHOME']}, :area => {:or => ['South West', 'North West']})
-      # Property.where(:area => ['South West', 'North West']) # This is like 'AND'
+      # Returns an array of property results. A Rental is defined as ["Single Family Residential", "Manufactured Home", "Condominium", "Townhouse"]
+      # Rental.where(:bedrooms => 7, :bathrooms => 4, :list_price => 200000..300000)
+      # Rental.where(:property_type => {:not => ['CONDO', 'TOWNHOME']}, :area => {:or => ['South West', 'North West']})
+      # Rental.where(:area => ['South West', 'North West']) # This is like 'AND'
       def where(search_params = {})
         TouRETS.ensure_connected!
         [].tap do |properties|
-          search_params = map_ver_search_params(SEARCH_QUERY_DEFAULTS.merge(search_params))
+          search_params = map_rnt_search_params(SEARCH_QUERY_DEFAULTS.merge(search_params))
           search_config = SEARCH_CONFIG_DEFAULTS.merge({:query => hash_to_rets_query_string(search_params)})
           Search.find(search_config) do |property|
             properties << self.new(property)
@@ -46,13 +44,13 @@ module TouRETS
       #   self
       # end
       # 
-      # # Property.where(:bedrooms => 3).count #not implemented
+      # # Rental.where(:bedrooms => 3).count #not implemented
       # def count
       #   {:count_mode => :only}
       #   self
       # end
       # 
-      # # Property.select(['SystemName', 'LongName']).where(:bedrooms => 3) #not implemented
+      # # Rental.select(['SystemName', 'LongName']).where(:bedrooms => 3) #not implemented
       # # select is to limit which fields actually get returned. This could help with mapping
       # def select(fields=[])
       #   {:select => fields}
@@ -86,7 +84,7 @@ module TouRETS
     
       def grab_photos
         [].tap do |pics|
-          pics << TouRETS::Photo.find(attributes['sysid'], :resource => :Property)
+          pics << TouRETS::Photo.find(attributes['sysid'], :resource => :Rental)
         end.flatten
       end
     

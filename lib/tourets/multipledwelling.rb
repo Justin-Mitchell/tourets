@@ -1,19 +1,19 @@
 module TouRETS
-  class Lotsnland
+  class Multipledwelling
     include Utilities
     extend Utilities
     
     SEARCH_QUERY_DEFAULTS = {:listing_status => "ER,EA,C,S", :idx_display => "Y"}
     # This class searches for ResidentialProperty, Condo, SingleFamily, Rental
-    # Some MLS use "5", some use :LND... Will need to decide which way is to be used.
+    # Some MLS use "4", some use :MUL... Will need to decide which way is to be used.
     # Meta-Classes are as listed in the following
-    # 
-    # Description  => Vacant / Subdivided Land
-    # StandardName => LotsAndLand
-    # VisibleName  => LND
-    # ClassName    => 5
     #
-    SEARCH_CONFIG_DEFAULTS = {:search_type => :Property, :class => "5"}
+    # Description  => Multiple Dwelling
+    # StanderdName => MultiFamily
+    # VisibleName  => MUL
+    # ClassName    => 4
+    # 
+    SEARCH_CONFIG_DEFAULTS = {:search_type => :Property, :class => "4"}
     
     class << self
       
@@ -31,13 +31,32 @@ module TouRETS
       def where(search_params = {})
         TouRETS.ensure_connected!
         [].tap do |properties|
-          search_params = map_lnd_search_params(SEARCH_QUERY_DEFAULTS.merge(search_params))
+          search_params = map_mul_search_params(SEARCH_QUERY_DEFAULTS.merge(search_params))
           search_config = SEARCH_CONFIG_DEFAULTS.merge({:query => hash_to_rets_query_string(search_params)})
           Search.find(search_config) do |property|
             properties << self.new(property)
           end
         end
       end
+      
+      # # Propert.where(:bedrooms => 3).limit(10) #not implemented
+      # def limit(limit_number = 5000)
+      #   {:limit => limit_number}
+      #   self
+      # end
+      # 
+      # # Property.where(:bedrooms => 3).count #not implemented
+      # def count
+      #   {:count_mode => :only}
+      #   self
+      # end
+      # 
+      # # Property.select(['SystemName', 'LongName']).where(:bedrooms => 3) #not implemented
+      # # select is to limit which fields actually get returned. This could help with mapping
+      # def select(fields=[])
+      #   {:select => fields}
+      #   self
+      # end
       
     end
     

@@ -8,6 +8,8 @@ require 'tourets/photo'
 require 'tourets/property'
 require 'tourets/highrise'
 require 'tourets/lotsnland'
+require 'tourets/rental'
+require 'tourets/multipledwelling'
 
 module TouRETS
   include Utilities
