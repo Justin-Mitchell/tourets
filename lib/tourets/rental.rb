@@ -3,7 +3,7 @@ module TouRETS
     include Utilities
     extend Utilities
     
-    SEARCH_QUERY_DEFAULTS = {:listing_status => "ER,EA,C", :idx_display => "Y"}
+    SEARCH_QUERY_DEFAULTS = {:listing_status => "ER,EA,C", :idx => "Y"}
     # This class searches for ResidentialRental, Condo, SingleFamily, Rental
     # Some MLS use "9", some use :RNT... Will need to decide which way is to be used.
     #

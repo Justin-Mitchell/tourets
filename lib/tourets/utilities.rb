@@ -144,7 +144,7 @@ module TouRETS
         :buyer_premium => 2880,
         :drivinglatitude => 2901,
         :drivinglongitude => 2902,
-        :city => 2909,
+        :city => 2909
       }
     end
     
@@ -305,7 +305,7 @@ module TouRETS
         :sp_lp => 2864,
         :drivinglatitude => 2901,
         :drivinglongitude => 2902,
-        :city => 2909,
+        :city => 2909
       }
     end
     
@@ -418,7 +418,7 @@ module TouRETS
         :auction_type => 2879,
         :drivinglatitude => 2901,
         :drivinglongitude => 2902,
-        :city => 2909,
+        :city => 2909
       }
     end
         
@@ -572,7 +572,7 @@ module TouRETS
         :buyer_premium => 2880,
         :drivinglatitude => 2901,
         :drivinglongitude => 2902,
-        :city => 2909,
+        :city => 2909
       }
     end
     
@@ -738,7 +738,7 @@ module TouRETS
         :buyer_premium => 2880,
         :drivinglatitude => 2901,
         :drivinglongitude => 2902,
-        :city => 2909,
+        :city => 2909
       }
     end
 
