@@ -27,13 +27,7 @@ module TouRETS
     # All results are esentially just strings. The comments below indicate what the value type should be by how it's formatted
     def key_map
       {
-        :id => "sysid", #String
-        :property_type => "1", #String
-        :acreage => "2", #Float
-        :zip_code => "10", #String
-        :close_date => "25", #DateTime
-        :agent_name => "26", #String
-        :annual_property_tax => "28" #Integer
+        :listed_on => "138", #DateTime
       }
     end
     
