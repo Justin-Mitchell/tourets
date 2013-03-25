@@ -3,7 +3,7 @@ module TouRETS
     include Utilities
     extend Utilities
     
-    SEARCH_QUERY_DEFAULTS = {:listing_status => "ER,EA,C", :idx => "Y", :internet__y_n => "Y"}
+    SEARCH_QUERY_DEFAULTS = {:listing_status => "ER,EA,C", :idx_display => "Y", :internet_display => "Y"}
     # This class searches for ResidentialProperty, Condo, SingleFamily, Rental
     # Some MLS use "1", some use :RES... Will need to decide which way is to be used.
     SEARCH_CONFIG_DEFAULTS = {:search_type => :Property, :class => "1"}
@@ -34,21 +34,21 @@ module TouRETS
       
       # # Propert.where(:bedrooms => 3).limit(10) #not implemented
       # def limit(limit_number = 5000)
-      #   {:limit => limit_number}
-      #   self
+      # {:limit => limit_number}
+      # self
       # end
-      # 
+      #
       # # Property.where(:bedrooms => 3).count #not implemented
       # def count
-      #   {:count_mode => :only}
-      #   self
+      # {:count_mode => :only}
+      # self
       # end
-      # 
+      #
       # # Property.select(['SystemName', 'LongName']).where(:bedrooms => 3) #not implemented
       # # select is to limit which fields actually get returned. This could help with mapping
       # def select(fields=[])
-      #   {:select => fields}
-      #   self
+      # {:select => fields}
+      # self
       # end
       
     end
@@ -84,3 +84,6 @@ module TouRETS
     
   end
 end
+
+
+
