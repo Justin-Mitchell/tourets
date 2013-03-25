@@ -182,7 +182,8 @@ module TouRETS
         :has_public_address => "2858", #Boolean
         :commentary? => "2859", #Boolean
         :avm? => "2860", #Boolean
-        :public_address => "2861" #String
+        :public_address => "2861", #String
+        :parking_description => "1510"  #String
       }
     end
     
