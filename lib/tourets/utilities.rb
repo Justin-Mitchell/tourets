@@ -31,7 +31,6 @@ module TouRETS
         :property_type => "1", #String
         :acreage => "2", #Float
         :zip_code => "10", #String
-        :address => "13", #String
         :partial_flag => "17", #String
         :close_date => "25", #DateTime
         :agent_name => "26", #String
@@ -183,9 +182,7 @@ module TouRETS
         :has_public_address => "2858", #Boolean
         :commentary? => "2859", #Boolean
         :avm? => "2860", #Boolean
-        :public_address => "2861", #String
-        :auction_date => "2878", #DateTime
-        :auction_type => "2879" #String
+        :public_address => "2861" #String
       }
     end
     
