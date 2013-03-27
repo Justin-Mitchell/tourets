@@ -1,5 +1,5 @@
 module TouRETS
-  class Property
+  class Residential
     include Utilities
     extend Utilities
     

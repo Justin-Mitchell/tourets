@@ -5,7 +5,7 @@ require 'tourets/exceptions'
 require 'tourets/extensions/hash' # This should go away after Rails 4.0
 require 'tourets/search'
 require 'tourets/photo'
-require 'tourets/property'
+require 'tourets/reidential'
 require 'tourets/highrise'
 require 'tourets/lotsnland'
 require 'tourets/rental'
