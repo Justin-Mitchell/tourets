@@ -239,7 +239,7 @@ module TouRETS
         :key_deposit => '1492',
         :fence => '1498',
         :num_fireplaces => '1499',
-        :garage => '1505',
+        #:garage => '1505',
         :internet__y_n => '1507',
         :construction_description => '1509',
         :parking_description => '1510',
