@@ -11,7 +11,7 @@ module TouRETS
     class << self
       
       # Returns an array of all of the properties. Same as calling where() with no options
-      # TODO: figure out why it limits to 5,000 records.
+      # TODO: figure out why it limits to 5,000 records. test
       # Property.all
       def all
         where
