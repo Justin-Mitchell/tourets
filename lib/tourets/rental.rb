@@ -84,7 +84,7 @@ module TouRETS
     
       def grab_photos
         [].tap do |pics|
-          pics << TouRETS::Photo.find(attributes['sysid'], :resource => :Rental)
+          pics << TouRETS::Photo.find(attributes['sysid'], :resource => :Property)
         end.flatten
       end
     
