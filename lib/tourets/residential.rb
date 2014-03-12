@@ -3,7 +3,7 @@ module TouRETS
     include Utilities
     extend Utilities
     
-    SEARCH_QUERY_DEFAULTS = {:status => "ER,EA,C,P,X,S", :idx => "Y"}
+    SEARCH_QUERY_DEFAULTS = {:status => "ER,EA,C,P,X,S,W,WC", :idx => "Y"}
     # This class searches for ResidentialProperty, Condo, SingleFamily, Rental
     # Some MLS use "1", some use :RES... Will need to decide which way is to be used.
     SEARCH_CONFIG_DEFAULTS = {:search_type => :Property, :class => "1"}
@@ -11,7 +11,7 @@ module TouRETS
     class << self
       
       # Returns an array of all of the properties. Same as calling where() with no options
-      # TODO: figure out why it limits to 5,000 records. test
+      # CoreLogic forces all queries to limit of 5000 records.
       # Property.all
       def all
         where
