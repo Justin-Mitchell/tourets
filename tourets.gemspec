@@ -15,7 +15,8 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = TouRETS::Rails::VERSION
   
-  gem.add_dependency('ruby-rets', :github => 'agentformula/ruby-rets')
+  # removed dependency cause rubygems no longer carries this gem.  Moved to :github => 'agentformula/ruby-rets'
+  #gem.add_dependency('ruby-rets', :github => 'agentformula/ruby-rets')
   gem.add_dependency('railties', '>= 3.1')
   gem.add_development_dependency('rspec')
   gem.add_development_dependency('vcr')
