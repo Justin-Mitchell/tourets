@@ -100,6 +100,8 @@ module TouRETS
         :res_pvspa => '236',
         :res_approx_liv_area => '237',
         :status => '242',
+        :streetname => '243',
+        :streetnumber => '244',
         :res_subdivision_name => '247',
         :res_washer_dryer_location => '260',
         :res_water => '261',
