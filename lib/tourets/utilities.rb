@@ -379,7 +379,6 @@ module TouRETS
         :ver_building_number => '2664',
         :ver_total_floors => '2665',
         :ver_elevator_floor_num => '2667',
-        :ver_builder => '2668',
         :ver_model => '2669',
         :ver_built_description => '2670',
         :ver_location => '2671',
