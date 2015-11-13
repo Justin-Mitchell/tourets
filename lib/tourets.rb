@@ -10,6 +10,7 @@ require 'tourets/highrise'
 require 'tourets/lotsnland'
 require 'tourets/rental'
 require 'tourets/multipledwelling'
+require 'tourets/office'
 
 module TouRETS
   include Utilities
