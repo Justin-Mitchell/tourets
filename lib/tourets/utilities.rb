@@ -18,6 +18,12 @@ module TouRETS
       Hash[search_params.map {|k, v| [key_map[k], v] }]
     end
     
+    def map_office_params(search_params)
+      office_file = File.join(Dir.pwd, 'lib', 'tourets', 'maps', 'office.yml')
+      office_map = YAML.load_file(office_file)
+      Hash[search_params.map {|k,v| [office_map[k], v] }]
+    end
+    
     # Giant Hash.
     # TODO: OPTIMIZE!!!! ZOMG! O_o
     # Maybe break this into a YAML file that will pick which keymap to use based on the current_connection?
