@@ -3,7 +3,6 @@ module TouRETS
     include Utilities
     extend Utilities
     
-    SEARCH_QUERY_DEFAULTS = {}
     # This class searches for Realtors in the GLVAR
     # Some MLS use '10', some user :User... 
     # Will need to decide which way is to be used.
@@ -26,6 +25,7 @@ module TouRETS
     # license_number => 2271
     # agent_fullname => 2551
     
+    SEARCH_QUERY_DEFAULTS = {}
     SEARCH_CONFIG_DEFAULTS = {:search_type => :User, :class => '10'}
     
     class << self
@@ -36,21 +36,21 @@ module TouRETS
       
       def where(search_params = {})
         TouRETS.ensure_connected!
-        [].tap do |users|
+        [].tap do |properties|
           search_params = map_user_params(SEARCH_QUERY_DEFAULTS.merge(search_params))
           search_config = SEARCH_CONFIG_DEFAULTS.merge({:query => hash_to_rets_query_string(search_params)})
-          Search.find(search_config) do |user|
-            users << self.new(user)
+          Search.find(search_config) do |property|
+            properties << self.new(property)
           end
         end
       end
       
       attr_accessor :attributes
-      
+    
       def initialize(args = {})
         self.attributes = args
       end
-      
+    
       # Look for one of the mapped keys, and return the value or throw method missing error.
       def method_missing(method_name, *args, &block)
         mapped_key = user_map[method_name.to_sym]
