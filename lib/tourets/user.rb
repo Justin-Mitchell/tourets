@@ -51,6 +51,7 @@ module TouRETS
         self.attributes = args
       end
       
+      # Look for one of the mapped keys, and return the value or throw method missing error.
       def method_missing(method_name, *args, &block)
         mapped_key = user_map[method_name.to_sym]
         if attributes.has_key?(mapped_key)
