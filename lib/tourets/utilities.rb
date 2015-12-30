@@ -19,8 +19,6 @@ module TouRETS
     end
     
     def map_office_params(search_params)
-      office_file = File.join(Dir.pwd, 'lib', 'tourets', 'maps', 'office.yml')
-      office_map = YAML.load_file(office_file)
       Hash[search_params.map {|k,v| [office_map[k], v] }]
     end
     
@@ -512,7 +510,24 @@ module TouRETS
         :drivinglongitude => '2902',
         :city => '2909'
       }
- 
+    end
+    
+    def office_map
+      {
+        :city => '1608',
+        :state => '1609',
+        :address => '1645',
+        :city_and_state => '1647',
+        :last_transaction_code => '1650',
+        :last_transaction_date => '1651',
+        :code => '1652',
+        :name => '1653',
+        :phone => '1654',
+        :flag => '1658',
+        :zip => '1659',
+        :broker => '2217',
+        :broker_name => '2533'
+      }
     end
     
     # Take values like true and false, convert them to "Y" or "N". make collections into joint strings.
