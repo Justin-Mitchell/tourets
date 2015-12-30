@@ -9,6 +9,7 @@ module TouRETS
       def find(search_params = {}, &block)
         raise ArgumentError, "No block passed" unless block_given?
         TouRETS.ensure_connected!
+        binding.pry
         TouRETS.current_connection.search(search_params, &block)
       end
       
