@@ -1,5 +1,5 @@
 module TouRETS
-  class User
+  class Agent
     include Utilities
     extend Utilities
     

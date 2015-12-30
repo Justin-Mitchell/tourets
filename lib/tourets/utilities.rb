@@ -23,7 +23,7 @@ module TouRETS
     end
     
     def map_user_params(search_params)
-      Hash[search_params.map {|k,v| [user_map[k], v] }]
+      Hash[search_params.map {|k, v| [user_map[k], v] }]
     end
     
     # Giant Hash.
@@ -551,7 +551,7 @@ module TouRETS
         :agent_id => '1727',
         :zip_code => '1730',
         :license_number => '2271',
-        :agent_fullname => '2551',
+        :agent_fullname => '2551'
       }
     end
     
@@ -569,9 +569,9 @@ module TouRETS
           "~#{value[:not].join(',')}"
         end
       when TrueClass
-        "Y" # TODO: figure out if this should be Y or Yes
+        "Y"
       when FalseClass
-        "N" # TODO: figure out if this should be N or No
+        "N"
       else
         value
       end
