@@ -23,7 +23,7 @@ module TouRETS
     end
     
     def map_user_params(search_params)
-      Hash[search_params.map {|k, v| [agent_map[k], v] }]
+      Hash[search_params.map {|k, v| [user_map[k], v] }]
     end
     
     # Giant Hash.
