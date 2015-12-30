@@ -22,6 +22,10 @@ module TouRETS
       Hash[search_params.map {|k,v| [office_map[k], v] }]
     end
     
+    def map_user_params(search_params)
+      Hash[search_params.map {|k,v| [user_map[k], v] }]
+    end
+    
     # Giant Hash.
     # TODO: OPTIMIZE!!!! ZOMG! O_o
     # Maybe break this into a YAML file that will pick which keymap to use based on the current_connection?
@@ -527,6 +531,27 @@ module TouRETS
         :zip => '1659',
         :broker => '2217',
         :broker_name => '2533'
+      }
+    end
+    
+    def user_map
+      {
+        :address => '1661',
+        :office_phone => '1661',
+        :access_flag => '1664',
+        :city => '1669',
+        :state => '1670',
+        :first_name => '1715',
+        :fax => '1716',
+        :last_name => '1717',
+        :last_transaction_code => '1718',
+        :last_transaction_timestamp => '1719',
+        :office_code => '1720',
+        :roster_flag => '1724',
+        :agent_id => '1727',
+        :zip_code => '1730',
+        :license_number => '2271',
+        :agent_fullname => '2551',
       }
     end
     
