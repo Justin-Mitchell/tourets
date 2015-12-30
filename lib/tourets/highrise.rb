@@ -18,9 +18,6 @@ module TouRETS
     
     class << self
       
-      # Returns an array of all of the properties. Same as calling where() with no options
-      # TODO: figure out why it limits to 5,000 records.
-      # Property.all
       def all
         where
       end
@@ -39,26 +36,7 @@ module TouRETS
           end
         end
       end
-      
-      # # Propert.where(:bedrooms => 3).limit(10) #not implemented
-      # def limit(limit_number = 5000)
-      #   {:limit => limit_number}
-      #   self
-      # end
-      # 
-      # # Property.where(:bedrooms => 3).count #not implemented
-      # def count
-      #   {:count_mode => :only}
-      #   self
-      # end
-      # 
-      # # Property.select(['SystemName', 'LongName']).where(:bedrooms => 3) #not implemented
-      # # select is to limit which fields actually get returned. This could help with mapping
-      # def select(fields=[])
-      #   {:select => fields}
-      #   self
-      # end
-      
+  
     end
     
     attr_accessor :attributes

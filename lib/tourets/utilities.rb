@@ -23,7 +23,7 @@ module TouRETS
     end
     
     def map_user_params(search_params)
-      Hash[search_params.map {|k, v| [user_map[k], v] }]
+      Hash[search_params.map {|k, v| [agent_map[k], v] }]
     end
     
     # Giant Hash.
@@ -548,8 +548,8 @@ module TouRETS
         :last_transaction_timestamp => '1719',
         :office_code => '1720',
         :roster_flag => '1724',
-        :agent_id => '1727',
-        :zip_code => '1730',
+        :agentcode => '1727',
+        :zipcode => '1730',
         :license_number => '2271',
         :agent_fullname => '2551'
       }

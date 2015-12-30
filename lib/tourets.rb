@@ -11,7 +11,7 @@ require 'tourets/lotsnland'
 require 'tourets/rental'
 require 'tourets/multipledwelling'
 require 'tourets/office'
-require 'tourets/agent'
+require 'tourets/user'
 
 module TouRETS
   include Utilities
