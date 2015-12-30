@@ -26,7 +26,7 @@ module TouRETS
     # agent_fullname => 2551
     
     SEARCH_QUERY_DEFAULTS = {}
-    SEARCH_CONFIG_DEFAULTS = {:search_type => :User, :class => '10'}
+    SEARCH_CONFIG_DEFAULTS = {:search_type => :User, :class => "10"}
     
     class << self
       
@@ -44,24 +44,24 @@ module TouRETS
           end
         end
       end
-      
-      attr_accessor :attributes
     
-      def initialize(args = {})
-        self.attributes = args
-      end
-    
-      # Look for one of the mapped keys, and return the value or throw method missing error.
-      def method_missing(method_name, *args, &block)
-        mapped_key = user_map[method_name.to_sym]
-        if attributes.has_key?(mapped_key)
-          attributes[mapped_key]
-        else
-          super
-        end
-      end
+    end
       
+    attr_accessor :attributes
+    
+    def initialize(args = {})
+      self.attributes = args
     end
     
-  end
+    # Look for one of the mapped keys, and return the value or throw method missing error.
+    def method_missing(method_name, *args, &block)
+      mapped_key = user_map[method_name.to_sym]
+      if attributes.has_key?(mapped_key)
+        attributes[mapped_key]
+      else
+        super
+      end
+    end
+      
+  end 
 end
