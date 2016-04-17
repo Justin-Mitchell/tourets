@@ -512,7 +512,8 @@ module TouRETS
         :buyer_premium => '2880',
         :drivinglatitude => '2901',
         :drivinglongitude => '2902',
-        :city => '2909'
+        :city => '2909',
+        :age_restricted => '2983'
       }
     end
     
@@ -552,6 +553,38 @@ module TouRETS
         :zipcode => '1730',
         :license_number => '2271',
         :agent_fullname => '2551'
+      }
+    end
+    
+    def open_house_map
+      {
+        :address_line_1 => '1660',
+        :office_phone => '1661',
+        :access_flag => '1664',
+        :city => '1669',
+        :state => '1670',
+        :first_name => '1715',
+        :agent_phone => '1716',
+        :last_name => '1717',
+        :last_transaction_code => '1718',
+        :last_transaction_timestamp => '1719',
+        :office_code => '1720',
+        :roster_flag => '1724',
+        :public_id => '1727',
+        :zip_code => '1730',
+        :license_number => '2271',
+        :agent_full_name => '2551'
+      }
+    end
+    
+    def media_map
+      {
+        :ml_num => 'MLNumber',
+        :image_type => 'ImageType',
+        :shot_number => 'ShotNumber',
+        :comments => 'Comments',
+        :resource_name => 'ResourceName',
+        :view_picture_id => 'ViewPictureID'
       }
     end
     

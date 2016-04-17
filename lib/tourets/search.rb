@@ -12,6 +12,12 @@ module TouRETS
         TouRETS.current_connection.search(search_params, &block)
       end
       
+      def metadata(params = {}, &block)
+        raise ArgumentError, "No block passed" unless block_given?
+        TouRETS.ensure_connected!
+        TouRETS.current_connection.get_metadata(params, &block)
+      end
+      
     end
     
   end

@@ -38,6 +38,15 @@ module TouRETS
         end
       end
       
+      def getmetadata
+        # http://glvar.apps.retsiq.com/rets/getmetadata?Type=METADATA-TABLE&ID=Property:9&Format=STANDARD-XML
+        {
+          :type => 'METADATA-TABLE',
+          :id => 'Property:9',
+          :format => 'STANDARD-XML'
+        }
+      end
+      
       # # Propert.where(:bedrooms => 3).limit(10) #not implemented
       # def limit(limit_number = 5000)
       #   {:limit => limit_number}
