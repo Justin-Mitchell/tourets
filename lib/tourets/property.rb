@@ -4,7 +4,7 @@ module TouRETS
     extend Utilities
 
     SEARCH_QUERY_DEFAULTS = {}
-    SEARCH_CONFIG_DEFAULTS = {:search_type => :Property, :class => 'Resi'}
+    SEARCH_CONFIG_DEFAULTS = {:search_type => :Property, :class => 'Res'}
 
     class << self
 
