@@ -86,7 +86,7 @@ module TouRETS
         :list_price => '144',
         :res_lot_sqft => '154',
         :res_community_name => '155',
-        :ml_num => 'R56',
+        :ml_num => 'mls_number',
         :res_lo_name => '171',
         :original_list_price => '173',
         :photo_instructions => '182',
