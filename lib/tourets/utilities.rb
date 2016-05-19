@@ -1,6 +1,6 @@
 module TouRETS
   module Utilities
-    
+
     # Convert a key value pair into a RETS formatted query string.
     # TODO: Take values that are arrays, ranges, or hashes, and convert those properly
     def hash_to_rets_query_string(hash)
@@ -11,21 +11,21 @@ module TouRETS
         end
       end.join(',')
     end
-    
+
     # This takes a hash of search parameters, and modifies
     # the hash to have the correct key types for the current RETS server
     def map_search_params(search_params)
       Hash[search_params.map {|k, v| [key_map[k], v] }]
     end
-    
+
     def map_office_params(search_params)
       Hash[search_params.map {|k,v| [office_map[k], v] }]
     end
-    
+
     def map_user_params(search_params)
       Hash[search_params.map {|k, v| [user_map[k], v] }]
     end
-    
+
     # Giant Hash.
     # TODO: OPTIMIZE!!!! ZOMG! O_o
     # Maybe break this into a YAML file that will pick which keymap to use based on the current_connection?
@@ -33,7 +33,7 @@ module TouRETS
     # Also good to note that there are different data types, but they all are strings.
     # We could figure out a way to convert to Integer, or DateTime objects, etc... depending.
     # All results are esentially just strings. The comments below indicate what the value type should be by how it's formatted
-    def key_map 
+    def key_map
       {
         :id => 'sysid',
         :property_type => '1',
@@ -86,7 +86,7 @@ module TouRETS
         :list_price => '144',
         :res_lot_sqft => '154',
         :res_community_name => '155',
-        :ml_num => '163',
+        :ml_num => 'MLSNumber',
         :res_lo_name => '171',
         :original_list_price => '173',
         :photo_instructions => '182',
@@ -516,7 +516,7 @@ module TouRETS
         :age_restricted => '2983'
       }
     end
-    
+
     def office_map
       {
         :city => '1608',
@@ -534,7 +534,7 @@ module TouRETS
         :broker_name => '2533'
       }
     end
-    
+
     def user_map
       {
         :address => '1661',
@@ -555,7 +555,7 @@ module TouRETS
         :agent_fullname => '2551'
       }
     end
-    
+
     def open_house_map
       {
         :address_line_1 => '1660',
@@ -576,7 +576,7 @@ module TouRETS
         :agent_full_name => '2551'
       }
     end
-    
+
     def media_map
       {
         :ml_num => 'MLNumber',
@@ -587,7 +587,7 @@ module TouRETS
         :view_picture_id => 'ViewPictureID'
       }
     end
-    
+
     # Take values like true and false, convert them to "Y" or "N". make collections into joint strings.
     def value_map(value)
       v = case value.class
@@ -610,6 +610,6 @@ module TouRETS
       end
       v
     end
-    
+
   end
 end
