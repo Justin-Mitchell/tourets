@@ -15,7 +15,6 @@ module TouRETS
           search_params = map_search_params(SEARCH_QUERY_DEFAULTS.merge(search_params))
           search_config = SEARCH_CONFIG_DEFAULTS.merge({:query => hash_to_rets_query_string(search_params)})
           Search.find(search_config) do |property|
-            binding.pry
             properties << self.new(property)
           end
         end
