@@ -1,25 +1,25 @@
 module TouRETS
   class Photo
-    
+
     class << self
-      
-      # Find the photo 
+
+      # Find the photo
       # Use find("1234", :id => 1) to find the photo with ID 1 in the 1234 group
       # Default it to return all of the photos.
-      def find(sysid, opts={})
-        limit = opts[:id] || "*"
+      def find(matrix_unique_id, opts={})
+        photo_id = opts[:id] || "*"
         resource = opts[:resource] || :Property
         [].tap do |photos|
-          TouRETS.current_connection.get_object(:resource => opts[:resource], :type => :Photo, :location => false, :id => "#{sysid}:#{limit}") do |headers, content|
+          TouRETS.current_connection.get_object(:resource => opts[:resource], :type => :Photo, :location => false, :id => "#{matrix_unique_id}:#{photo_id}") do |headers, content|
             photos << new(headers, content)
           end
         end
       end
-      
+
     end
 
     attr_accessor :id, :resource_id, :content_type, :content
-    
+
     # id is the ID of the photo
     # resource_id is the ID of the resource it belongs to. Properties will probably be sysid everytime
     # content_type is the Image content_type
@@ -30,14 +30,14 @@ module TouRETS
       self.content_type = headers["content-type"]
       self.content = content
     end
-    
+
     # Use this method to get the binary string to write to a file.
     # Sometimes the string will contin ASCII-8BIT characters.
     # Forcing to UTF-8 will make it write to a file easier.
     def image
       content.to_s.force_encoding("UTF-8")
     end
-    
+
     # Returns a filename based on the resource_id and id of the photo
     # should have proper extension on it.
     def filename
@@ -49,6 +49,6 @@ module TouRETS
       end
       "#{resource_id}-#{id}.#{ext}"
     end
-    
+
   end
 end
