@@ -14,12 +14,13 @@ Gem::Specification.new do |gem|
   gem.name          = "tourets"
   gem.require_paths = ["lib"]
   gem.version       = TouRETS::Rails::VERSION
-  
+
   # removed dependency cause rubygems no longer carries this gem.  Moved to :github => 'agentformula/ruby-rets'
   #gem.add_dependency('ruby-rets', :github => 'agentformula/ruby-rets')
   gem.add_dependency('railties', '>= 3.1')
   gem.add_development_dependency('rspec')
   gem.add_development_dependency('vcr')
   gem.add_development_dependency('webmock')
+  gem.add_development_dependency('pry')
   gem.add_development_dependency('rails', '>= 3.1')
 end
