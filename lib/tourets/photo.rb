@@ -7,10 +7,10 @@ module TouRETS
       # Use find("1234", :id => 1) to find the photo with ID 1 in the 1234 group
       # Default it to return all of the photos.
       def find(matrix_unique_id, opts={})
-        wildcard = "*"
+        photo_id = opts[:id] || "*"
         resource = opts[:resource] || :Property
         [].tap do |photos|
-          TouRETS.current_connection.get_object(:resource => resource, :type => :Photo, :id => "#{matrix_unique_id}:*") do |headers, content|
+          TouRETS.current_connection.get_object(:resource => resource, :type => :Photo, :id => "#{matrix_unique_id}:#{photo_id}") do |headers, content|
             photos << new(headers, content)
           end
         end
