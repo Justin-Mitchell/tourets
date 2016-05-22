@@ -25,9 +25,9 @@ module TouRETS
     # content_type is the Image content_type
     # content is the Binary string that can be written to a file to display the image.
     def initialize(headers, content)
-      self.id = content.id
-      self.resource_id = content.resource_id
-      self.content_type = content.content_type
+      self.id = headers["object-id"]
+      self.resource_id = headers["content-id"]
+      self.content_type = headers["content-type"]
       self.content = content
     end
 
