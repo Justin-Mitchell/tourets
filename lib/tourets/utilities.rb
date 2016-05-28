@@ -43,7 +43,9 @@ module TouRETS
         original_entry_timestamp: 'OriginalEntryTimestamp',
         bedrooms: 'BedsTotal',
         bathrooms: 'BathsTotal',
-        year_built: 'YearBuilt' 
+        year_built: 'YearBuilt',
+        property_type: 'PropertyType',
+        property_subtype: 'PropertySubType', 
       }
     end
 
