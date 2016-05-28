@@ -35,7 +35,7 @@ module TouRETS
     # All results are esentially just strings. The comments below indicate what the value type should be by how it's formatted
     def key_map
       {
-        :all => 'matrix_unique_id',
+        :all => 'Matrix_Unique_ID',
         :id => 'sysid',
         :property_type => 'property_type',
         :res_approximate_acreage => 'num_acres',
