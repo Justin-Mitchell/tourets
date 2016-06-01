@@ -45,7 +45,9 @@ module TouRETS
         bathrooms: 'BathsTotal',
         year_built: 'YearBuilt',
         property_type: 'PropertyType',
-        property_subtype: 'PropertySubType', 
+        property_subtype: 'PropertySubType',
+        postal_code: 'PostalCode',
+        status: 'Status',
       }
     end
 

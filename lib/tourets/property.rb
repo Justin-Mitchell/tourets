@@ -1,4 +1,4 @@
-module TouRETS
+ module TouRETS
   class Property
     include Utilities
     extend Utilities
