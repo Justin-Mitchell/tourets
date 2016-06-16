@@ -1,3 +1,5 @@
+require 'base64'
+
 module TouRETS
   class Photo
 
@@ -35,19 +37,28 @@ module TouRETS
     # Sometimes the string will contin ASCII-8BIT characters.
     # Forcing to UTF-8 will make it write to a file easier.
     def image
-      content.to_s.force_encoding("UTF-8")
+      @image ||= content.to_s.force_encoding("UTF-8")
+    end
+
+    # Returns the Base64 string used for images on the web.
+    def to_base64
+      "data:image/#{extension};base64,#{Base64.encode64(image)}"
     end
 
     # Returns a filename based on the resource_id and id of the photo
     # should have proper extension on it.
     def filename
-      ext = case content_type
+      "#{resource_id}-#{id}.#{extension}"
+    end
+
+    def extension
+      @extension ||= case content_type
       when /jpeg$/, /jpg$/ then "jpg"
       when /png$/ then "png"
       when /gif$/ then "gif"
       else "jpg"
       end
-      "#{resource_id}-#{id}.#{ext}"
+      @extension
     end
 
   end
