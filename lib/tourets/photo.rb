@@ -10,7 +10,7 @@ module TouRETS
         photo_id = opts[:id] || "*"
         resource = opts[:resource] || :Property
         [].tap do |photos|
-          TouRETS.current_connection.get_object(:resource => resource, :type => :Photo, :id => "#{matrix_unique_id}:#{photo_id}") do |headers, content|
+          TouRETS.current_connection.get_object(:resource => resource, :type => :LargePhoto, :id => "#{matrix_unique_id}:#{photo_id}") do |headers, content|
             photos << new(headers, content)
           end
         end
